@@ -391,6 +391,10 @@
               class="w-full max-w-md rounded-lg border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
             />
             <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"></div>
+            <label for="beta-consent" class="flex items-start gap-3 text-sm text-slate-600 max-w-md w-full text-left">
+              <input id="beta-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-600">
+              <span id="beta-consent-text">I agree to receive emails about DialDay's TestFlight beta and launch announcement. No other emails. Unsubscribe anytime.</span>
+            </label>
             <button
               id="beta-submit"
               type="submit"
@@ -486,6 +490,14 @@
             return;
           }
 
+          const consentCheckbox = document.getElementById('beta-consent');
+          if (!consentCheckbox || !consentCheckbox.checked) {
+            setStatus('Please agree to receive emails to continue.', 'error');
+            return;
+          }
+          const consentSpan = document.getElementById('beta-consent-text');
+          const consentText = (consentSpan && consentSpan.textContent || '').replace(/\s+/g, ' ').trim();
+
           const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
           const token = (window.turnstile && typeof window.turnstile.getResponse === 'function')
             ? window.turnstile.getResponse()
@@ -503,7 +515,7 @@
             const res = await fetch('/api/subscribe', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ email: value, turnstileToken: token })
+              body: JSON.stringify({ email: value, turnstileToken: token, consent: true, consentText: consentText })
             });
             if (res.ok) {
               renderSuccess();

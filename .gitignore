@@ -1,7 +1,11 @@
 .DS_Store
 node_modules/
+
+# Local secrets / env
 .env
 .env.local
+.dev.vars
+
 .wrangler/
 *.log
 dist/

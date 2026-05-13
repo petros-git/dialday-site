@@ -2,7 +2,11 @@
  * GET /api/_admin/export
  *
  * Lists every subscriber record stored under the `email:` prefix in Workers KV
- * and returns it as a CSV with columns: email, subscribed_at.
+ * and returns it as a CSV with columns:
+ *   email, subscribed_at, consent_version, consent_text, ip
+ *
+ * Every field is wrapped in double quotes per RFC 4180 — inner quotes are
+ * doubled (" → "").
  *
  * Auth: Bearer token in the Authorization header. Constant-time compare against
  * the ADMIN_TOKEN env var.
@@ -25,6 +29,9 @@ interface SubscriberRecord {
   subscribedAt?: string;
   ip?: string;
   userAgent?: string;
+  consentText?: string;
+  consentVersion?: string;
+  consentGivenAt?: string;
 }
 
 const KV_PREFIX = "email:";
@@ -38,12 +45,11 @@ const timingSafeEqual = (a: string, b: string): boolean => {
   return mismatch === 0;
 };
 
-const csvEscape = (value: string): string => {
-  if (/[",\r\n]/.test(value)) {
-    return `"${value.replace(/"/g, '""')}"`;
-  }
-  return value;
-};
+const csvField = (value: string | undefined): string =>
+  `"${(value ?? "").replace(/"/g, '""')}"`;
+
+const csvRow = (fields: ReadonlyArray<string | undefined>): string =>
+  fields.map(csvField).join(",");
 
 export const onRequest: PagesFunction<Env> = async (ctx) => {
   const { request, env } = ctx;
@@ -65,7 +71,9 @@ export const onRequest: PagesFunction<Env> = async (ctx) => {
     return new Response("Unauthorized", { status: 401 });
   }
 
-  const rows: string[] = ["email,subscribed_at"];
+  const rows: string[] = [
+    csvRow(["email", "subscribed_at", "consent_version", "consent_text", "ip"]),
+  ];
   let cursor: string | undefined = undefined;
 
   while (true) {
@@ -78,16 +86,23 @@ export const onRequest: PagesFunction<Env> = async (ctx) => {
     for (const key of page.keys) {
       const email = key.name.slice(KV_PREFIX.length);
       const raw = await env.EMAIL_LIST.get(key.name);
-      let subscribedAt = "";
+      let parsed: SubscriberRecord = {};
       if (raw) {
         try {
-          const parsed = JSON.parse(raw) as SubscriberRecord;
-          subscribedAt = parsed.subscribedAt || "";
+          parsed = JSON.parse(raw) as SubscriberRecord;
         } catch {
-          subscribedAt = "";
+          parsed = {};
         }
       }
-      rows.push(`${csvEscape(email)},${csvEscape(subscribedAt)}`);
+      rows.push(
+        csvRow([
+          email,
+          parsed.subscribedAt,
+          parsed.consentVersion,
+          parsed.consentText,
+          parsed.ip,
+        ])
+      );
     }
 
     if (page.list_complete) break;
