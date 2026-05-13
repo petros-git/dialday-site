@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dialday.app/sitemap.xml

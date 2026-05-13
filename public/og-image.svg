@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#fafaf9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#2563eb"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="290" font-size="140" font-weight="800" fill="#0f172a" letter-spacing="-4">DialDay</text>
+    <rect x="540" y="320" width="120" height="4" rx="2" fill="#2563eb"/>
+    <text x="600" y="400" font-size="38" font-weight="500" fill="#334155">The CRM for people who sell on the phone.</text>
+    <text x="600" y="460" font-size="26" font-weight="400" fill="#64748b">One-tap dialing · Auto call logging · AI objection coach</text>
+  </g>
+  <text x="60" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#94a3b8">dialday.app</text>
+</svg>

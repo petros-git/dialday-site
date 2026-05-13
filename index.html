@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DialDay — The CRM for people who sell on the phone</title>
+    <meta
+      name="description"
+      content="DialDay is a mobile-first CRM built for sales reps on the phone all day. One-tap dialing, automatic call logging, AI objection coach. Free for 100 contacts."
+    />
+    <link rel="canonical" href="https://dialday.app/" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DialDay — The CRM for people who sell on the phone" />
+    <meta
+      property="og:description"
+      content="One-tap dialing, automatic call logging, AI objection coach. Built for real estate agents, insurance brokers, direct sales reps, and B2B sellers. Free for 100 contacts."
+    />
+    <meta property="og:url" content="https://dialday.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dialday.app/public/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DialDay — The CRM for people who sell on the phone" />
+    <meta
+      name="twitter:description"
+      content="One-tap dialing, automatic call logging, AI objection coach. Built for real estate agents, insurance brokers, direct sales reps, and B2B sellers."
+    />
+    <meta name="twitter:image" content="https://dialday.app/public/og-image.svg" />
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DialDay",
+        "description": "A mobile-first CRM built for sales reps on the phone all day. One-tap dialing, automatic call logging, AI objection coach.",
+        "operatingSystem": "iOS",
+        "applicationCategory": "BusinessApplication",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Free",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pro",
+            "price": "9.99",
+            "priceCurrency": "EUR"
+          }
+        ]
+      }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+    <style>
+      html { scroll-behavior: smooth; }
+      .sr-only {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+      }
+      .focus\:not-sr-only:focus, .focus-visible\:not-sr-only:focus-visible {
+        position: static; width: auto; height: auto; margin: 0; overflow: visible;
+        clip: auto; white-space: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-stone-50 text-slate-900 antialiased">
+    <!--
+      COPY GUARDRAILS — APPLE REVIEW RISK
+      Do NOT add: "MLM", "multi-level marketing", "network marketing", "downline",
+      "upline", "distributor" (as a role noun), "ambassador", "recruit your team",
+      or any income claims to ANY user-facing surface.
+      KEEP: "direct sales reps", "real estate agents", "insurance brokers", "B2B sellers",
+      "people who sell on the phone".
+    -->
+
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:shadow"
+    >Skip to content</a>
+
+    <!-- [A] Nav -->
+    <header
+      id="site-header"
+      class="sticky top-0 z-40 transition-colors duration-200 border-b border-transparent"
+    >
+      <div class="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+        <a href="/" class="font-extrabold tracking-tight text-xl text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">DialDay</a>
+        <nav aria-label="Primary" class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+          <a href="#features" class="hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">Features</a>
+          <a href="#pricing" class="hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">Pricing</a>
+          <a href="#faq" class="hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">FAQ</a>
+        </nav>
+        <a
+          href="#beta"
+          class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 transition-colors"
+        >Join the beta</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- TODO: on App Store launch, replace TestFlight signup form with App Store badge linking to the listing -->
+
+      <!-- [B] Hero -->
+      <section class="relative overflow-hidden bg-gradient-to-b from-blue-50 to-stone-50">
+        <div class="mx-auto max-w-7xl px-6 pt-16 pb-20 md:pt-24 md:pb-28 lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-slate-900">
+              The CRM for people who sell on the phone.
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
+              One-tap dialing, automatic call logging, and AI that handles objections — built for real estate agents, insurance brokers, direct sales reps, and B2B sellers.
+            </p>
+
+            <form
+              id="hero-form"
+              class="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl"
+              novalidate
+            >
+              <label for="hero-email" class="sr-only">Email address</label>
+              <input
+                id="hero-email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="you@work.com"
+                class="flex-1 rounded-lg border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+              />
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 transition-colors"
+              >Join the beta</button>
+            </form>
+            <p class="mt-3 text-sm text-slate-500">Free forever for your first 100 contacts. No credit card.</p>
+          </div>
+
+          <div class="mt-14 lg:mt-0 lg:col-span-5">
+            <div class="relative mx-auto max-w-[280px]">
+              <div class="absolute -inset-6 bg-gradient-to-br from-blue-200/40 via-transparent to-transparent rounded-[3rem] blur-2xl" aria-hidden="true"></div>
+              <div
+                class="relative aspect-[9/19] rounded-[2.5rem] border-[10px] border-slate-900 bg-gradient-to-b from-blue-100 to-white shadow-2xl shadow-blue-900/10 overflow-hidden"
+                role="img"
+                aria-label="DialDay app screenshot placeholder"
+              >
+                <div class="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-6 bg-slate-900 rounded-b-2xl" aria-hidden="true"></div>
+                <div class="flex items-center justify-center h-full p-6 text-center">
+                  <p class="text-sm font-medium text-slate-500 leading-relaxed">App screenshot<br/>— coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- [C] Positioning line -->
+      <section class="bg-white border-y border-slate-200">
+        <div class="mx-auto max-w-5xl px-6 py-16 md:py-20 text-center">
+          <p class="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900 leading-snug">
+            Built for the rep on the phone — not the manager writing reports.
+          </p>
+        </div>
+      </section>
+
+      <!-- [D] Problem / Promise -->
+      <section class="bg-stone-50">
+        <div class="mx-auto max-w-3xl px-6 py-20 md:py-24">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+            Generic CRMs were built for sales teams. You're a rep with a phone, a list, and a daily quota.
+          </h2>
+          <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+            DialDay is the opposite. Every screen is optimized for one-tap dialing, fast notes, and never losing track of who to follow up with today.
+          </p>
+        </div>
+      </section>
+
+      <!-- [E] Features -->
+      <section id="features" class="bg-white border-t border-slate-200">
+        <div class="mx-auto max-w-7xl px-6 py-20 md:py-24">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Features</h2>
+          <p class="mt-3 text-lg text-slate-600 max-w-2xl">Everything a phone rep needs. Nothing they don't.</p>
+
+          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 transition-colors">
+              <div class="text-blue-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-slate-900">One-tap calling</h3>
+              <p class="mt-2 text-slate-600 leading-relaxed">Every contact has a primary phone. Tap to dial. Outcome and duration logged automatically when you hang up.</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 transition-colors">
+              <div class="text-blue-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  <path d="M12 8v6"/>
+                  <path d="M9 11h6"/>
+                </svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-slate-900">AI objection coach</h3>
+              <p class="mt-2 text-slate-600 leading-relaxed">Paste an objection. Get three responses in your voice, ready to use on the next call.</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 transition-colors">
+              <div class="text-blue-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="23 4 23 10 17 10"/>
+                  <polyline points="1 20 1 14 7 14"/>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                </svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-slate-900">Cadences</h3>
+              <p class="mt-2 text-slate-600 leading-relaxed">Structured follow-up sequences. New leads don't slip, hot leads don't go cold.</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 transition-colors">
+              <div class="text-blue-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                  <line x1="12" y1="19" x2="12" y2="23"/>
+                  <line x1="8" y1="23" x2="16" y2="23"/>
+                </svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-slate-900">Voice notes</h3>
+              <p class="mt-2 text-slate-600 leading-relaxed">Record a note after the call. We transcribe it and attach it to the contact.</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 transition-colors">
+              <div class="text-blue-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                </svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-slate-900">Smart lists</h3>
+              <p class="mt-2 text-slate-600 leading-relaxed">Dynamic segments: "no contact in 14 days," "hot leads," "birthdays this week." Built once, updated live.</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 transition-colors">
+              <div class="text-blue-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-slate-900">EU privacy</h3>
+              <p class="mt-2 text-slate-600 leading-relaxed">Your data lives in Frankfurt. Encrypted in transit. Offline-first — works without signal.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- [F] Pricing -->
+      <section id="pricing" class="bg-stone-50 border-t border-slate-200">
+        <div class="mx-auto max-w-7xl px-6 py-20 md:py-24">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Pricing</h2>
+            <p class="mt-3 text-lg text-slate-600">Start free. Upgrade when your pipeline outgrows 100 contacts.</p>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <!-- Free -->
+            <article class="rounded-2xl border border-slate-200 bg-white p-8 flex flex-col">
+              <h3 class="text-2xl font-bold text-slate-900">Free</h3>
+              <p class="mt-1 text-sm text-slate-500">For reps starting out</p>
+              <p class="mt-6 text-4xl font-extrabold text-slate-900">€0 <span class="text-base font-medium text-slate-500">forever</span></p>
+              <ul class="mt-8 space-y-3 text-slate-700">
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>Up to 100 contacts</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>All calling, notes, and follow-up features</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>CSV + device contact import</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>Works offline</span></li>
+              </ul>
+              <a
+                href="#beta"
+                class="mt-10 inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-base font-semibold text-slate-900 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 transition-colors"
+              >Join the beta</a>
+            </article>
+
+            <!-- Pro -->
+            <article class="relative rounded-2xl border-2 border-blue-600 bg-white p-8 flex flex-col shadow-lg shadow-blue-900/5">
+              <span class="absolute -top-3 left-8 inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider">Recommended</span>
+              <h3 class="text-2xl font-bold text-slate-900">Pro</h3>
+              <p class="mt-1 text-sm text-slate-500">For reps building a pipeline</p>
+              <p class="mt-6 text-4xl font-extrabold text-slate-900">€9.99 <span class="text-base font-medium text-slate-500">/month</span></p>
+              <p class="mt-1 text-sm text-slate-500">or €79.99/year</p>
+              <ul class="mt-8 space-y-3 text-slate-700">
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>Everything in Free, plus:</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>Unlimited contacts</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>AI objection coach</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>AI message drafter</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>Voice-note transcripts</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>Cadences</span></li>
+                <li class="flex gap-3"><span class="text-blue-600 mt-0.5" aria-hidden="true">✓</span><span>Smart lists</span></li>
+              </ul>
+              <a
+                href="#beta"
+                class="mt-10 inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 transition-colors"
+              >Join the beta</a>
+            </article>
+          </div>
+
+          <p class="mt-8 text-center text-sm text-slate-500">No credit card to start. Cancel anytime.</p>
+        </div>
+      </section>
+
+      <!-- [G] FAQ -->
+      <section id="faq" class="bg-white border-t border-slate-200">
+        <div class="mx-auto max-w-3xl px-6 py-20 md:py-24">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Frequently asked</h2>
+
+          <div class="mt-10 divide-y divide-slate-200 border-y border-slate-200">
+            <details class="group py-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">
+                When does DialDay launch?
+                <span class="ml-4 text-blue-600 transition-transform group-open:rotate-45" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </summary>
+              <p class="mt-3 text-slate-600 leading-relaxed">We're in private beta now. Join the TestFlight list and we'll send you an invite as soon as the next round opens. Public App Store launch in 2026.</p>
+            </details>
+
+            <details class="group py-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">
+                What platforms is DialDay on?
+                <span class="ml-4 text-blue-600 transition-transform group-open:rotate-45" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </summary>
+              <p class="mt-3 text-slate-600 leading-relaxed">iOS first. A desktop companion app is available for power users who prefer a keyboard. Android is on the roadmap, not the immediate path.</p>
+            </details>
+
+            <details class="group py-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">
+                Is my data private?
+                <span class="ml-4 text-blue-600 transition-transform group-open:rotate-45" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </summary>
+              <p class="mt-3 text-slate-600 leading-relaxed">Yes. Your contacts and call history live in EU-hosted infrastructure (Frankfurt), encrypted in transit. You own your data — export or delete it anytime.</p>
+            </details>
+
+            <details class="group py-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">
+                Can I import my existing contacts?
+                <span class="ml-4 text-blue-600 transition-transform group-open:rotate-45" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </summary>
+              <p class="mt-3 text-slate-600 leading-relaxed">Yes. Import from a CSV file or pull directly from your phone's contacts. Imported contacts count toward your 100-contact free tier.</p>
+            </details>
+
+            <details class="group py-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">
+                How do I join the beta?
+                <span class="ml-4 text-blue-600 transition-transform group-open:rotate-45" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </summary>
+              <p class="mt-3 text-slate-600 leading-relaxed">Drop your email below. When the next TestFlight round opens, you'll get an invite from Apple. No commitment, no payment.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- [H] Final CTA -->
+      <section id="beta" class="bg-gradient-to-b from-stone-50 to-blue-50 border-t border-slate-200">
+        <div class="mx-auto max-w-2xl px-6 py-20 md:py-24 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Be first on the phone.</h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">TestFlight beta is opening in rounds. Drop your email and we'll send the invite the day the next round opens.</p>
+
+          <form id="beta-form" class="mt-8 flex flex-col items-center gap-4" novalidate>
+            <label for="beta-email" class="sr-only">Email address</label>
+            <input
+              id="beta-email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="you@work.com"
+              class="w-full max-w-md rounded-lg border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+            />
+            <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"></div>
+            <button
+              id="beta-submit"
+              type="submit"
+              class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            >Join the beta</button>
+            <div id="beta-status" role="status" aria-live="polite" class="text-sm text-slate-600 min-h-[1.25rem]"></div>
+          </form>
+
+          <p class="mt-6 text-sm text-slate-500">No spam. One email when the beta opens, one when we launch. Unsubscribe anytime.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- [I] Footer -->
+    <footer class="bg-white border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+        <p>DialDay © 2026 · Made in Greece 🇬🇷</p>
+        <nav aria-label="Footer" class="flex items-center gap-6">
+          <a href="/privacy" class="hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">Privacy</a>
+          <a href="/terms" class="hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">Terms</a>
+          <a href="mailto:support@dialday.app" class="hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded">support@dialday.app</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // Nav scroll-state: add backdrop blur + border when scrolled
+      (function () {
+        const header = document.getElementById('site-header');
+        if (!header) return;
+        const onScroll = () => {
+          if (window.scrollY > 8) {
+            header.classList.add('bg-stone-50/80', 'backdrop-blur', 'border-slate-200');
+            header.classList.remove('border-transparent');
+          } else {
+            header.classList.remove('bg-stone-50/80', 'backdrop-blur', 'border-slate-200');
+            header.classList.add('border-transparent');
+          }
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+
+      // Hero form: scroll-focus to #beta (does NOT POST)
+      (function () {
+        const hero = document.getElementById('hero-form');
+        if (!hero) return;
+        hero.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const heroEmail = document.getElementById('hero-email');
+          const betaEmail = document.getElementById('beta-email');
+          const beta = document.getElementById('beta');
+          if (heroEmail && betaEmail) betaEmail.value = heroEmail.value;
+          if (beta) beta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(() => betaEmail && betaEmail.focus({ preventScroll: true }), 600);
+        });
+      })();
+
+      // Beta form: POST to /api/subscribe
+      (function () {
+        const form = document.getElementById('beta-form');
+        if (!form) return;
+        const status = document.getElementById('beta-status');
+        const submit = document.getElementById('beta-submit');
+        const email = document.getElementById('beta-email');
+
+        const setStatus = (msg, tone) => {
+          if (!status) return;
+          status.textContent = msg;
+          status.className = 'text-sm min-h-[1.25rem] ' + (
+            tone === 'error' ? 'text-red-600' :
+            tone === 'success' ? 'text-emerald-700' :
+            'text-slate-600'
+          );
+        };
+
+        const renderSuccess = () => {
+          while (form.firstChild) form.removeChild(form.firstChild);
+          const p = document.createElement('p');
+          p.className = 'text-emerald-700 font-medium text-lg';
+          p.textContent = "You're on the list. Watch your inbox.";
+          form.appendChild(p);
+        };
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          setStatus('', 'info');
+
+          const value = ((email && email.value) || '').trim();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            setStatus('Please enter a valid email address.', 'error');
+            if (email) email.focus();
+            return;
+          }
+
+          const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+          const token = (window.turnstile && typeof window.turnstile.getResponse === 'function')
+            ? window.turnstile.getResponse()
+            : (tokenInput ? tokenInput.value : '');
+          if (!token) {
+            setStatus('Please complete the verification.', 'error');
+            return;
+          }
+
+          submit.disabled = true;
+          const originalLabel = submit.textContent;
+          submit.textContent = 'Joining…';
+
+          try {
+            const res = await fetch('/api/subscribe', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: value, turnstileToken: token })
+            });
+            if (res.ok) {
+              renderSuccess();
+              return;
+            }
+            if (res.status >= 400 && res.status < 500) {
+              setStatus("Couldn't subscribe. Check your email and try again.", 'error');
+            } else {
+              setStatus('Something went wrong. Try again or email support@dialday.app.', 'error');
+            }
+          } catch (err) {
+            setStatus('Something went wrong. Try again or email support@dialday.app.', 'error');
+          } finally {
+            if (submit) { submit.disabled = false; submit.textContent = originalLabel; }
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
